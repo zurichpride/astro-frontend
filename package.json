@@ -1,25 +1,25 @@
 {
-  "name": "",
-  "type": "module",
-  "version": "0.0.1",
-  "engines": {
+	"name": "",
+	"type": "module",
+	"version": "0.0.1",
+	"engines": {
 	"node": ">=22.12.0"
-  },
-  "scripts": {
+	},
+	"scripts": {
 	"dev": "astro dev",
 	"build": "astro build",
 	"preview": "astro preview",
 	"astro": "astro",
 	"generate-types": "wrangler types"
-  },
-  "dependencies": {
+	},
+	"dependencies": {
 	"@astrojs/cloudflare": "^13.7.0",
 	"astro": "^6.4.6"
-  },
-  "devDependencies": {
+	},
+	"devDependencies": {
 	"wrangler": "^4.99.0"
-  },
-  "overrides": {
+	},
+	"overrides": {
 	"vite": "^7"
-  }
+	}
 }
