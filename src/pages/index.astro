@@ -1,7 +1,7 @@
 ---
-
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
 ---
-
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -23,10 +23,7 @@
 		<meta property="og:image" content="https://zurichpride.ch/content/meta_image.png" />
 	</head>
 	<body>
-		<nav>
-			<h1>Zurich Pride</h1>
-			<a href="/events">Events</a>
-		</nav>
+		<Header />
 		<main>
 			<div class="hero">
 			</div>
@@ -52,29 +49,6 @@
 				</div>
 			</div>
 		</main>
-		<footer>
-			<div>
-				<h1>Zurich Pride</h1>
-				<span>&copy; 2026 Zurich Pride</span>
-			</div>
-			<div>
-				<h4>Social Links</h4>
-				<a href="https://instagram.com/zurichpride">Instagram</a>
-				<a href="https://tiktok.com/zurichpride">TikTok</a>
-				<a href="https://youtube.com/@zurichpridefestival">YouTube</a>
-			</div>
-			<div>
-				<h4>Information</h4>
-				<a href="/about">About</a>
-				<a href="/newsletter">Newsletter</a>
-				<a href="/contact">Contact</a>
-			</div>
-			<div>
-				<h4>Legal</h4>
-				<a href="/imprint">Imprint</a>
-				<a href="/privacy">Privacy</a>
-				<a href="/cookies">Cookies</a>
-			</div>
-		</footer>
+		<Footer />
 	</body>
 </html>
