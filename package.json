@@ -3,23 +3,23 @@
   "type": "module",
   "version": "0.0.1",
   "engines": {
-    "node": ">=22.12.0"
+	"node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "generate-types": "wrangler types"
+	"dev": "astro dev",
+	"build": "astro build",
+	"preview": "astro preview",
+	"astro": "astro",
+	"generate-types": "wrangler types"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.7.0",
-    "astro": "^6.4.6"
+	"@astrojs/cloudflare": "^13.7.0",
+	"astro": "^6.4.6"
   },
   "devDependencies": {
-    "wrangler": "^4.99.0"
+	"wrangler": "^4.99.0"
   },
   "overrides": {
-    "vite": "^7"
+	"vite": "^7"
   }
 }
