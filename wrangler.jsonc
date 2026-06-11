@@ -1,5 +1,5 @@
 {
-	"name": "",
+	"name": "astro-frontend",
 	"compatibility_date": "2026-06-11",
 	"compatibility_flags": ["global_fetch_strictly_public", "nodejs_compat"],
 	"main": "@astrojs/cloudflare/entrypoints/server",
