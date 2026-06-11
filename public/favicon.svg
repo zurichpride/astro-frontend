@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="none">
+<linearGradient id="red">
+<stop offset="0%" stop-color="#ff0000" />
+<stop offset="100%" stop-color="#ff000000" />
+</linearGradient>
+<linearGradient id="orange">
+<stop offset="0%" stop-color="#ffa500" />
+<stop offset="100%" stop-color="#ffa50000" />
+</linearGradient>
+<linearGradient id="yellow">
+<stop offset="0%" stop-color="#ffff00" />
+<stop offset="100%" stop-color="#ffff0000" />
+</linearGradient>
+<linearGradient id="green">
+<stop offset="0%" stop-color="#008000" />
+<stop offset="100%" stop-color="#00800000" />
+</linearGradient>
+<linearGradient id="blue">
+<stop offset="0%" stop-color="#0000ff" />
+<stop offset="100%" stop-color="#0000ff00" />
+</linearGradient>
+<linearGradient id="purple">
+<stop offset="0%" stop-color="#800080" />
+<stop offset="100%" stop-color="#80008000" />
+</linearGradient>
+<circle cx="15" cy="15" r="15" fill="url(#red)" transform-origin="center" transform="rotate(0)" />
+<circle cx="15" cy="15" r="15" fill="url(#orange)" opacity="90%" transform-origin="center" transform="rotate(60)" />
+<circle cx="15" cy="15" r="15" fill="url(#yellow)" opacity="80%" transform-origin="center" transform="rotate(120)" />
+<circle cx="15" cy="15" r="15" fill="url(#green)" opacity="70%" transform-origin="center" transform="rotate(180)" />
+<circle cx="15" cy="15" r="15" fill="url(#blue)" opacity="60%" transform-origin="center" transform="rotate(240)" />
+<circle cx="15" cy="15" r="15" fill="url(#purple)" opacity="50%" transform-origin="center" transform="rotate(300)" />
+<path d="M18,11.5 l1,-1 c3,-3 7,1 4,4 l-8 8 v-8 l-4,-4 c-3,-3 -7,1 -4,4 l3,3" stroke="white" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+</svg>
