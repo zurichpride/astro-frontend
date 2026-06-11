@@ -47,6 +47,7 @@ export default defineConfig({
 		{
 			provider: fontProviders.googleicons(),
 			name: "Material Symbols Rounded",
+			cssVariable: "--icons",
 			variationSettings: "'wght' 400, 'opsz' 24"
 		}
 	]
