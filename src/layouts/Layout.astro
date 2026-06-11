@@ -1,0 +1,46 @@
+---
+import '../styles/styles.css';
+import { Font } from "astro:assets";
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+
+const cf = Astro.request.cf;
+const city = cf?.city;
+
+const { title } = Astro.props;
+---
+
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="initial-scale=1, user-scalable=no, viewport-fit=cover" />
+
+		<link rel="icon" href="/favicon.svg" />
+		
+		<title>{title} // Zurich Pride</title>
+		<base href="https://preview.zurichpride.ch" />
+		<meta name="application-name" content="Zurich Pride" />
+		<meta name="description" content="The Biggest Queer Event in Switzerland." />
+		<meta name="keywords" content="Love, Queer, Zurich, Switzerland" />
+
+		<meta property="og:url" content="https://preview.zurichpride.ch" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="{title} // Zurich Pride" />
+		<meta property="og:description" content="The Biggest Queer Event in Switzerland." />
+		<meta property="og:image" content="https://zurichpride.ch/content/meta_image.png" />
+
+		<Font cssVariable="--unbounded" preload />
+		<Font cssVariable="--lilex" />
+		<Font cssVariable="--frances" />
+		<Font cssVariable="--oi" />
+		<Font cssVariable="--modak" />
+	</head>
+	<body>
+		<Header />
+		<main>
+		<p>You are in {city}.</p>
+		</main>
+		<Footer />
+	</body>
+</html

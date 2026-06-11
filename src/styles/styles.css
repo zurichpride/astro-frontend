@@ -1,0 +1,217 @@
+/* Order: @import, :root, *, Elements, Classes, IDs, Attributes, Selectors, Nesting Selectors, Pseudo-Elements, Pseudo-Classes, At-Rules */
+/* Order: Position, Size, Shape, Color, Function */
+
+:root {
+    --main-font: var(--unbounded), ui-sans-serif, sans-serif;
+	--mono-font: var(--lilex), ui-monospace, monospace;
+
+	--blue: #13c;
+	--red: #c13;
+	--yellow: #fc0;
+
+	--black: #000;
+	--white: #fff;
+	--transparent: #0000;
+	--grey: #f0f0f0;
+	--black-alpha: #0003;
+	--white-alpha: #fffa;
+
+	--primary: var(--red);
+	--secondary: var(--blue);
+	--content: var(--black);
+	--background: var(--white-alpha);
+	--accent: var(--yellow);
+
+	--shadow: 0px 0px 1vh var(--black-alpha);
+
+	overscroll-behavior: none;
+	user-select: none;
+	touch-action: pan-y;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+	}
+}
+
+body {
+	margin: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+	font-family: var(--main-font);
+	font-size: 2vh;
+	color: var(--content);
+	background: var(--grey);
+	accent-color: var(--accent);
+}
+
+* {
+	margin: unset;
+	padding: unset;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	border: unset;
+	outline: unset;
+	appearance: unset;
+	text-decoration: unset;
+	font-size: inherit;
+	font-family: inherit;
+	color: inherit;
+	background: none;
+}
+
+main {
+	padding: 4vh 40vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4vh;
+}
+
+header {
+	padding: 2vh 40vh;
+	position: sticky;
+	top: 0;
+	backdrop-filter: blur(10px);
+	display: flex;
+	justify-content: space-between;
+	background: var(--white-alpha);
+	box-shadow: var(--shadow);
+}
+
+footer {
+	padding: 2vh 40vh;
+	display: flex;
+	justify-content: center;
+	background: var(--black-alpha);
+}
+
+nav {
+	display: flex;
+	gap: 2vh;
+	align-items: center;
+	font-size: 2vh;
+}
+
+section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5vh;
+}
+
+div {
+	display: flex;
+}
+
+h1 {
+	font-size: 4vh;
+}
+
+h2 {
+	font-size: 3.5vh;
+}
+
+h3 {
+	font-size: 3.25vh;
+}
+
+h4 {
+	font-size: 3vh;
+}
+
+h5 {
+	font-size: 2.5vh;
+}
+
+h6 {
+	font-size: 2vh;
+}
+
+p {
+}
+
+img {
+	width: 100%;
+}
+
+iframe {
+	width: 100%;
+	aspect-ratio: 16/9;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+
+	& img {
+		height: 3.5vh;
+		margin-right: 1vh;
+	}
+
+	& h1:first-of-type {
+		font-weight: normal;
+	}
+}
+
+.button {
+	display: inline-flex;
+	padding: 1vh;
+	border-radius: 1vh 0.5vh;
+	color: var(--white);
+	background: var(--primary);
+}
+
+.box {
+	padding: 4vh;
+	flex-direction: column;
+	align-items: baseline;
+	box-shadow: var(--shadow);
+	background: var(--background);
+	border-radius: 2vh;
+}
+
+.hero {
+	position: relative;
+	height: 60vh;
+	z-index: -2;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: #0009;
+		z-index: -1;
+	}
+
+	& h1 {
+		font-size: 6vh;
+		color: var(--white);
+	}
+}
+
+button {
+	display: none;
+}
+
+@media (max-aspect-ratio: 1.75) {
+	nav {
+		display: none;
+	}
+	button {
+		display: unset;
+	}
+	main {
+		padding: 4vh;
+	}
+	header {
+		padding: 2vh;
+	}
+	footer {
+		padding: 2vh;
+	}
+	div {
+		flex-direction: column;
+	}
+}
