@@ -80,7 +80,7 @@ header {
 footer {
 	padding: 2vh 40vh;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	background: var(--black-alpha);
 }
 
