@@ -13,5 +13,17 @@
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+	"r2_buckets": [
+		{
+			"binding": "MEDIA",
+			"bucket_name": "zurichpride","preview_bucket_name": "zurichpride",
+		},
+	],
+	"kv_namespaces": [
+		{
+			"binding": "SESSION",
+			"id": "dc62eb07fb4e477b90ab854e36b59fb5"
+		}
+	],
 }
