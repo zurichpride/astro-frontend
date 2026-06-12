@@ -158,11 +158,6 @@ p {
 
 a {
 	font-weight: 450;
-	
-	&::before {
-		content: "🔗";
-		margin-right: 1vh;
-	}
 
 	&:not([class]):hover, &:not([class]):focus-visible {
 		text-decoration-line: underline;
