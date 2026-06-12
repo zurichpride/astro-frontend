@@ -1,5 +1,9 @@
 ---
 import Layout from '@layouts/Layout.astro';
+
+if (!Astro.currentLocale) {
+  return Astro.rewrite('/404');
+}
 ---
 
 <Layout title="Page">

@@ -183,6 +183,7 @@ a {
 	border-radius: 10vh;
 	color: var(--white);
 	background: var(--primary);
+	transition: var(--animation);
 
 	&:hover {
 		transform: scale(1.125);

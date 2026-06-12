@@ -1,6 +1,10 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Partners from '@components/Partners.astro';
+
+if (!Astro.currentLocale) {
+  return Astro.rewrite('/404');
+}
 ---
 
 <Layout title="Home">
