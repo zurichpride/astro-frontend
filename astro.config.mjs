@@ -7,6 +7,23 @@ import cloudflare from '@astrojs/cloudflare';
 export default defineConfig({
 	output: 'server',
 	adapter: cloudflare(),
+	i18n: {
+		defaultLocale: "de-CH",
+		locales: ["de-CH",
+			{
+				path: "en",
+				codes: ["en-CH", "en"]
+			},
+			{
+				path: "fr",
+				codes: ["fr-CH", "fr"]
+			},
+			{
+				path: "it",
+				codes: ["it-CH", "it"]
+			},
+		],
+	},
 	fonts: [
 		{
 			provider: fontProviders.google(),
