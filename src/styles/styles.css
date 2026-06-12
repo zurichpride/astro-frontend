@@ -137,8 +137,13 @@ p {
 }
 
 section a {
-	text-decoration: underline;
 	color: var(--red);
+
+	&:hover {
+		text-decoration-thickness: 0.4vh;
+		text-decoration-line: underline;
+		text-underline-offset: 0.4vh;
+	}
 }
 
 .logo {
@@ -195,8 +200,5 @@ section a {
 	}
 	footer {
 		padding: 2vh;
-	}
-	div {
-		flex-direction: column;
 	}
 }
