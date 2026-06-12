@@ -16,6 +16,7 @@
 	--grey: #f0f0f0;
 	--black-alpha: #0003;
 	--white-alpha: #fffa;
+	--red-alpha: #c139;
 
 	--primary: var(--red);
 	--secondary: var(--blue);
@@ -24,6 +25,9 @@
 	--accent: var(--yellow);
 
 	--shadow: 0px 0px 1vh var(--black-alpha);
+	--red-shadow: 0px 0px 4vh -1vh var(--red-alpha);
+
+	--animation: 0.5s ease-in-out;
 
 	overscroll-behavior: none;
 	user-select: none;
@@ -56,7 +60,7 @@ body {
 	font-family: inherit;
 	color: inherit;
 	background: none;
-	line-height: 100%;
+	line-height: 125%;
 }
 
 main {
@@ -154,8 +158,13 @@ p {
 
 a {
 	font-weight: 450;
+	
+	&::before {
+		content: "🔗";
+		margin-right: 1vh;
+	}
 
-	&:not([class]):hover {
+	&:not([class]):hover, &:not([class]):focus-visible {
 		text-decoration-line: underline;
 		text-decoration-skip-ink: none;
 		text-decoration-thickness: 2px;
@@ -175,10 +184,16 @@ a {
 
 .button {
 	display: inline-flex;
-	padding: 1vh;
-	border-radius: 1vh;
+	padding: 2vh;
+	border-radius: 10vh;
 	color: var(--white);
 	background: var(--primary);
+
+	&:hover {
+		transform: scale(1.125);
+		box-shadow: var(--red-shadow);
+		transition: var(--animation);
+	}
 }
 
 .box {
@@ -197,6 +212,7 @@ a {
 }
 
 .fancy {
+	text-align: center;
 	font-size: 12vh;
 	font-family: var(--modak);
 	font-weight: normal;
@@ -204,7 +220,7 @@ a {
 }
 
 .copyright {
-	gap: 2vh;
+	gap: 1vh;
 	justify-content: space-between;
 }
 
