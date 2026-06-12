@@ -4,6 +4,7 @@
 :root {
     --main-font: var(--unbounded), ui-sans-serif, sans-serif;
 	--mono-font: var(--lilex), ui-monospace, monospace;
+	--icon-font: var(--material);
 
 	--blue: #13c;
 	--red: #c13;
@@ -74,22 +75,25 @@ header {
 	justify-content: space-between;
 	background: var(--white-alpha);
 	box-shadow: var(--shadow);
-}
 
-nav {
-	display: flex;
-	gap: 2vh;
-	align-items: center;
-	font-size: 2vh;
+	& nav {
+		display: flex;
+		gap: 2vh;
+		align-items: center;
+		/* font-size: 2vh; */
+	}
 }
 
 footer {
 	padding: 2vh 40vh;
 	display: flex;
 	justify-content: space-between;
+	gap: 2vh;
 	background: var(--black-alpha);
 
 	& nav {
+		display: flex;
+		gap: 1vh;
 		flex-direction: column;
 		align-items: flex-end;
 	}
@@ -111,39 +115,57 @@ div {
 
 h1 {
 	font-size: 4vh;
+	font-weight: 600;
 }
 
 h2 {
 	font-size: 3.5vh;
+	font-weight: 600;
 }
 
 h3 {
 	font-size: 3.25vh;
+	font-weight: 600;
 }
 
 h4 {
 	font-size: 3vh;
+	font-weight: 600;
 }
 
 h5 {
 	font-size: 2.5vh;
+	font-weight: 600;
 }
 
 h6 {
 	font-size: 2vh;
+	font-weight: 600;
 }
 
 p {
+	font-weight: 300;
+}
+
+a {
+	font-weight: 450;
 }
 
 section a {
 	color: var(--red);
+}
 
-	&:hover {
-		text-decoration-thickness: 0.4vh;
-		text-decoration-line: underline;
-		text-underline-offset: 0.4vh;
-	}
+footer nav a:not([class]):hover::before {
+	content: "link_2";
+	font-family: var(--icon-font);
+	margin-right: 1vh;
+}
+
+a:not([class]):hover {
+	text-decoration-line: underline;
+	text-decoration-skip-ink: none;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 2px;
 }
 
 .logo {
@@ -153,10 +175,6 @@ section a {
 	& img {
 		height: 6vh;
 		margin-right: 2vh;
-	}
-
-	& h1:first-of-type {
-		font-weight: normal;
 	}
 }
 
@@ -179,26 +197,42 @@ section a {
 
 .subtitle {
 	color: var(--red);
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.modak {
+	font-family: var(--modak);
 }
 
 .copyright {
+	gap: 2vh;
 	justify-content: space-between;
 }
 
 @media (max-aspect-ratio: 1.75) {
-	nav {
-		display: none;
-	}
 	button {
 		display: unset;
 	}
+
 	main {
 		padding: 4vh;
 	}
+
 	header {
 		padding: 2vh;
+
+		& nav {
+			display: none;
+		}
 	}
+
 	footer {
 		padding: 2vh;
+		flex-direction: column-reverse;
+
+		& nav {
+			align-items: flex-start;
+		}
 	}
 }
