@@ -106,6 +106,10 @@ section {
 	justify-content: center;
 	align-items: center;
 	gap: 1.5vh;
+
+	& a {
+		color: var(--red);
+	}
 }
 
 div {
@@ -149,23 +153,13 @@ p {
 
 a {
 	font-weight: 450;
-}
 
-section a {
-	color: var(--red);
-}
-
-footer nav a:not([class]):hover::before {
-	content: "link_2";
-	font-family: var(--icon-font);
-	margin-right: 1vh;
-}
-
-a:not([class]):hover {
-	text-decoration-line: underline;
-	text-decoration-skip-ink: none;
-	text-decoration-thickness: 2px;
-	text-underline-offset: 2px;
+	&:not([class]):hover {
+		text-decoration-line: underline;
+		text-decoration-skip-ink: none;
+		text-decoration-thickness: 2px;
+		text-underline-offset: 2px;
+	}
 }
 
 .logo {
@@ -201,8 +195,10 @@ a:not([class]):hover {
 	text-transform: uppercase;
 }
 
-.modak {
+.fancy {
+	font-size: 12vh;
 	font-family: var(--modak);
+	font-weight: normal;
 }
 
 .copyright {
