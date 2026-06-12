@@ -5,9 +5,6 @@ import { Font } from "astro:assets";
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const cf = Astro.request.cf;
-const city = cf?.city;
-
 const { title } = Astro.props;
 ---
 
@@ -37,7 +34,6 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<Header />
-		<p>You are in {city}.</p>
 		<slot />
 		<Footer />
 	</body>
